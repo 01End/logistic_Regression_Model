@@ -1,0 +1,96 @@
+{
+  "model_type": "LogisticRegression",
+  "model_parameters": {
+    "coefficients": [
+      -0.0009753752403655445,
+      -0.004264440946474991,
+      0.18997583801924725,
+      -0.009522914677368887,
+      0.3302655460871883,
+      0.4681547087075931,
+      0.35201080752919645,
+      0.3588384475078211,
+      -0.3195258150416682
+    ],
+    "intercept": -0.14453527505565214,
+    "feature_names": [
+      "student_id",
+      "course_id",
+      "quiz1",
+      "quiz2",
+      "midterm",
+      "assignments",
+      "project",
+      "final",
+      "total"
+    ],
+    "n_features": 9,
+    "classes": [
+      "fail",
+      "pass"
+    ]
+  },
+  "performance_metrics": {
+    "accuracy": 0.7325253196081687,
+    "precision": 0.7339491577516138,
+    "recall": 0.7325253196081687,
+    "f1_score": 0.7322835694948452
+  },
+  "preprocessing_info": {
+    "grade_encoding": {
+      "type": "OrdinalEncoder",
+      "categories": [
+        "F",
+        "D-",
+        "D",
+        "D+",
+        "C-",
+        "C",
+        "C+",
+        "B-",
+        "B",
+        "B+",
+        "A-",
+        "A"
+      ],
+      "encoded_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    "status_encoding": {
+      "type": "LabelEncoder",
+      "mapping": {
+        "0": "fail",
+        "1": "pass"
+      }
+    },
+    "smote_applied": true,
+    "feature_scaling": "MinMaxScaler (if applied)"
+  },
+  "data_info": {
+    "training_samples": 48180,
+    "test_samples": 12046,
+    "original_features": [
+      "user_id",
+      "quiz1",
+      "quiz2",
+      "midterm",
+      "assignments",
+      "project",
+      "final",
+      "total",
+      "grade"
+    ]
+  }
+}
